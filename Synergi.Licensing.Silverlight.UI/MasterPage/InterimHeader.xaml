@@ -1,0 +1,52 @@
+﻿<UserControl
+    x:Class="Synergi.Licensing.Silverlight.UI.InterimHeader"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Synergi.Licensing.Silverlight.UI">
+    <Grid>
+
+        <StackPanel
+            Orientation="Horizontal"
+            VerticalAlignment="Bottom"
+            Background="{StaticResource InterimBackgroundBrush}">
+
+            <local:Logo></local:Logo>
+            
+            <local:InterimHeaderMenuButton
+                x:Name="uiRevenue"
+                ModuleName="revenue"
+                ModuleEntryPoint="{StaticResource RevenueEntryPoint}"
+                HighlightBrush="{StaticResource RevenueBrush}"></local:InterimHeaderMenuButton>
+            <local:InterimHeaderMenuButton
+                x:Name="uiEnergy"
+                ModuleName="energy"
+                ModuleEntryPoint="{StaticResource EnergyEntryPoint}"
+                HighlightBrush="{StaticResource EnergyBrush}"></local:InterimHeaderMenuButton>
+            <local:InterimHeaderMenuButton
+                x:Name="uiTimeCard"
+                ModuleName="timecard"
+                ModuleEntryPoint="{StaticResource TimeCardEntryPoint}"
+                HighlightBrush="{StaticResource TimeCardBrush}"></local:InterimHeaderMenuButton>
+            <local:InterimHeaderMenuButton
+                x:Name="uiRoster"
+                ModuleName="roster"
+                ModuleEntryPoint="{StaticResource RosterEntryPoint}"
+                HighlightBrush="{StaticResource RosterBrush}"></local:InterimHeaderMenuButton>
+            <local:InterimHeaderMenuButton
+                x:Name="uiBudget"
+                ModuleName="budget"
+                ModuleEntryPoint="{StaticResource BudgetEntryPoint}"
+                HighlightBrush="{StaticResource BudgetBrush}"></local:InterimHeaderMenuButton>
+            <local:InterimHeaderMenuButton
+                x:Name="uiCompetition"
+                ModuleName="competition"
+                ModuleEntryPoint="{StaticResource CompetitionEntryPoint}"
+                HighlightBrush="{StaticResource CompetitionBrush}"></local:InterimHeaderMenuButton>
+            <local:InterimHeaderMenuButton
+                x:Name="uiRates"
+                ModuleName="rates"
+                ModuleEntryPoint="{StaticResource RatesEntryPoint}"
+                HighlightBrush="{StaticResource RatesBrush}"></local:InterimHeaderMenuButton>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Synergi.Licensing.Web.UI.SynergiLicensingService" CodeBehind="SynergiLicensingService.svc.cs" %>

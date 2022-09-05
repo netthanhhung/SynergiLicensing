@@ -1,0 +1,53 @@
+﻿<navigation:Page x:Class="Synergi.Licensing.Silverlight.UI.HomePage" Title="Synergi Licensing"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:Synergi.Licensing.Silverlight.UI;assembly=Synergi.Licensing.Silverlight.UI"
+    xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"             
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation">
+    <navigation:Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Assets/Themes/BlackBlue/MasterResource.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </navigation:Page.Resources>
+
+    <Grid x:Name="LayoutRoot" Style="{StaticResource LayoutRootGridStyle}">
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="Auto"></RowDefinition>
+                <RowDefinition
+                    Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <local:ClippedGrid Grid.Row="0" Grid.ColumnSpan="2"
+                Background="{StaticResource DefaultBackgroundGradientBrush}">
+
+                <local:Highlight
+                    HighlightBrush="{StaticResource AdminBrush}"></local:Highlight>
+                <TextBlock
+                    x:Name="uiTitle"
+                    Margin="20,0,0,0"
+                    VerticalAlignment="Center"
+                    Foreground="White"
+                    Text="Home"></TextBlock>
+
+            </local:ClippedGrid>
+            <local:ClippedGrid Background="{StaticResource EmployeeImageBrush}"
+                               Grid.Row="1" Grid.ColumnSpan="2" />
+        </Grid>        
+
+    </Grid>
+</navigation:Page>

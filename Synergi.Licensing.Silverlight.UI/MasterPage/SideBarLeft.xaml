@@ -1,0 +1,19 @@
+﻿<UserControl
+    x:Class="Synergi.Licensing.Silverlight.UI.SideBarLeft"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Synergi.Licensing.Silverlight.UI">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="*"></RowDefinition>
+            <RowDefinition
+                Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <local:SideBarMenu></local:SideBarMenu>
+        
+    </Grid>
+
+</UserControl>

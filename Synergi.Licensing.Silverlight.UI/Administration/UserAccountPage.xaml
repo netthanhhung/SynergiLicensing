@@ -1,0 +1,59 @@
+﻿<navigation:Page x:Class="Synergi.Licensing.Silverlight.UI.UserAccountPage" Title="Synergi Licensing"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Synergi.Licensing.Silverlight.UI"
+    xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"             
+    xmlns:bg="clr-namespace:TiledBG;assembly=TiledBG"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation">
+    
+    <navigation:Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Assets/Themes/BlackBlue/MasterResource.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </navigation:Page.Resources>  
+    <Grid x:Name="LayoutRoot" Style="{StaticResource LayoutRootGridStyle}">
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="*"></RowDefinition>
+        </Grid.RowDefinitions>        
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="Auto"></RowDefinition>
+                <RowDefinition
+                    Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <local:ClippedGrid Grid.Row="0" Grid.ColumnSpan="2"
+                Background="{StaticResource DefaultBackgroundGradientBrush}">
+
+                <local:Highlight
+                    HighlightBrush="{StaticResource AdminBrush}"></local:Highlight>                
+                <TextBlock
+                    x:Name="uiTitle"
+                    Margin="20,0,0,0"
+                    VerticalAlignment="Center"
+                    Foreground="White"
+                    Text="User Account"></TextBlock>
+
+            </local:ClippedGrid>
+            <local:ClippedGrid Background="{StaticResource EmployeeImageBrush}"
+                               Grid.Row="1" Grid.ColumnSpan="2" />
+            <local:ClippedGrid
+                Grid.Row="1"
+                Margin="10" Opacity="0.9">
+                <bg:TiledBGControl BorderThickness="0" TiledImageSource="/Synergi.Licensing.Silverlight.UI;component/Images/carbon-fiber-10x10.png"/>
+                <local:UserAccount x:Name="ucUserAccount"></local:UserAccount>
+
+            </local:ClippedGrid>
+        </Grid>
+    </Grid>
+
+</navigation:Page>

@@ -1,0 +1,5 @@
+<%@ Register TagPrefix="radTS" Namespace="Telerik.WebControls" Assembly="RadTabstrip.Net2" %>
+
+<radTS:RadTabStrip Runat="server"
+    Skin="Outlook"	    
+	/>

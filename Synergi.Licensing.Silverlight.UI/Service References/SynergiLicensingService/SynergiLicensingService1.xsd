@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:49539/SynergiLicensingService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Web.UI" />
+  <xs:import schemaLocation="http://localhost:49539/SynergiLicensingService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost:49539/SynergiLicensingService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" />
+  <xs:element name="SelectSessionId">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectSessionIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SelectSessionIdResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGlobalVariable">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGlobalVariableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Web.UI" minOccurs="0" name="GetGlobalVariableResult" nillable="true" type="q1:GlobalVariable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppSettings">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppSettingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Web.UI" minOccurs="0" name="GetAppSettingsResult" nillable="true" type="q2:AppSettings" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserLogin">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Web.UI" minOccurs="0" name="GetUserLoginResult" nillable="true" type="q3:UserLogin" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAspUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="userId" type="q4:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAspUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" minOccurs="0" name="GetAspUserResult" nillable="true" type="q5:AspUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListAspUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="userId" nillable="true" type="q6:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListAspUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" minOccurs="0" name="ListAspUserResult" nillable="true" type="q7:ArrayOfAspUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnlockAspUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" minOccurs="0" name="oldUser" nillable="true" type="q8:AspUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnlockAspUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" minOccurs="0" name="UnlockAspUserResult" nillable="true" type="q9:AspUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAspUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" minOccurs="0" name="saveUser" nillable="true" type="q10:AspUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAspUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" minOccurs="0" name="SaveAspUserResult" nillable="true" type="q11:AspUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangePassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="oldPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="newPassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangePasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ChangePasswordResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListContactInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="contactInfoId" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListContactInformationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" minOccurs="0" name="ListContactInformationResult" nillable="true" type="q12:ArrayOfContactInformation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveContactInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" minOccurs="0" name="saveList" nillable="true" type="q13:ArrayOfContactInformation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveContactInformationResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="customerId" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="includeLegacy" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" minOccurs="0" name="ListCustomerResult" nillable="true" type="q14:ArrayOfCustomer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" minOccurs="0" name="saveList" nillable="true" type="q15:ArrayOfCustomer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCustomerResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListModule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="moduleId" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListModuleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" minOccurs="0" name="ListModuleResult" nillable="true" type="q16:ArrayOfModule" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListModulesOfPackage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="packageId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListModulesOfPackageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" minOccurs="0" name="ListModulesOfPackageResult" nillable="true" type="q17:ArrayOfModule" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListAdditionalContractModules">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="contractId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListAdditionalContractModulesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" minOccurs="0" name="ListAdditionalContractModulesResult" nillable="true" type="q18:ArrayOfModule" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveModule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" minOccurs="0" name="saveList" nillable="true" type="q19:ArrayOfModule" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveModuleResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListPackage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="packageId" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="includeLegacy" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListPackageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" minOccurs="0" name="ListPackageResult" nillable="true" type="q20:ArrayOfPackage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePackage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" minOccurs="0" name="saveList" nillable="true" type="q21:ArrayOfPackage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePackageResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListCompetitorSource">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="competitorSourceId" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListCompetitorSourceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" minOccurs="0" name="ListCompetitorSourceResult" nillable="true" type="q22:ArrayOfCompetitorSource" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListContractCompetitorSources">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="contractId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListContractCompetitorSourcesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" minOccurs="0" name="ListContractCompetitorSourcesResult" nillable="true" type="q23:ArrayOfCompetitorSource" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCompetitorSource">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" minOccurs="0" name="saveList" nillable="true" type="q24:ArrayOfCompetitorSource" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCompetitorSourceResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListCountry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="countryId" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListCountryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" minOccurs="0" name="ListCountryResult" nillable="true" type="q25:ArrayOfCountry" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListContract">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="contractId" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="customerId" nillable="true" type="xs:int" />
+        <xs:element xmlns:q26="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="licenseKey" nillable="true" type="q26:guid" />
+        <xs:element minOccurs="0" name="domainName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="packageId" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="includeLegacy" type="xs:boolean" />
+        <xs:element minOccurs="0" name="listCustomer" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListContractResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" minOccurs="0" name="ListContractResult" nillable="true" type="q27:ArrayOfContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveContracts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" minOccurs="0" name="saveList" nillable="true" type="q28:ArrayOfContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveContractsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveContract">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" minOccurs="0" name="savedContract" nillable="true" type="q29:Contract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveContractResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" minOccurs="0" name="SaveContractResult" nillable="true" type="q30:Contract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

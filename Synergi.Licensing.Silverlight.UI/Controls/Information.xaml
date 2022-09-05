@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="Synergi.Licensing.Silverlight.UI.Information"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Resources>
+        <SolidColorBrush
+            x:Key="InfoBorderBrush"
+            Color="LightCyan" />
+    </UserControl.Resources>
+    
+    <Grid x:Name="LayoutRootInformation">        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border
+            BorderThickness="1,1,1,1"
+            BorderBrush="{StaticResource InfoBorderBrush}">
+            <StackPanel
+                Orientation="Horizontal"
+                VerticalAlignment="Bottom"
+                Background="LightSkyBlue">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="uiImageInfo" 
+                           Grid.Column="0" Margin="5,5,5,5"
+                           Source="/Synergi.Licensing.Silverlight.UI;component/Images/info.png"></Image>
+                    <TextBlock x:Name="textInfo"
+                            Grid.Column="1"                
+                            Margin="{StaticResource SmallContentMargin}"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Foreground="Black">
+                    </TextBlock>
+                </Grid>
+            </StackPanel>
+
+        </Border>
+    </Grid>
+</UserControl>

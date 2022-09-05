@@ -1,0 +1,18 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_SynergiLicensingService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:49540/SynergiLicensingService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_SynergiLicensingService"
+                contract="SynergiLicensingService.SynergiLicensingService"
+                name="BasicHttpBinding_SynergiLicensingService" />
+        </client>
+    </system.serviceModel>
+</configuration>

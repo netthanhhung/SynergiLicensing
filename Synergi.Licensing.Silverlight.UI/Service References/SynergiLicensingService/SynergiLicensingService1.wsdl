@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="/Imports">
+      <xsd:import schemaLocation="http://localhost:49539/SynergiLicensingService.svc?xsd=xsd0" />
+      <xsd:import schemaLocation="http://localhost:49539/SynergiLicensingService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49539/SynergiLicensingService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Web.UI" />
+      <xsd:import schemaLocation="http://localhost:49539/SynergiLicensingService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="SynergiLicensingService_SelectSessionId_InputMessage">
+    <wsdl:part name="parameters" element="SelectSessionId" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_SelectSessionId_OutputMessage">
+    <wsdl:part name="parameters" element="SelectSessionIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_GetGlobalVariable_InputMessage">
+    <wsdl:part name="parameters" element="GetGlobalVariable" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_GetGlobalVariable_OutputMessage">
+    <wsdl:part name="parameters" element="GetGlobalVariableResponse" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_GetAppSettings_InputMessage">
+    <wsdl:part name="parameters" element="GetAppSettings" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_GetAppSettings_OutputMessage">
+    <wsdl:part name="parameters" element="GetAppSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_GetUserLogin_InputMessage">
+    <wsdl:part name="parameters" element="GetUserLogin" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_GetUserLogin_OutputMessage">
+    <wsdl:part name="parameters" element="GetUserLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_GetAspUser_InputMessage">
+    <wsdl:part name="parameters" element="GetAspUser" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_GetAspUser_OutputMessage">
+    <wsdl:part name="parameters" element="GetAspUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_ListAspUser_InputMessage">
+    <wsdl:part name="parameters" element="ListAspUser" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_ListAspUser_OutputMessage">
+    <wsdl:part name="parameters" element="ListAspUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_UnlockAspUser_InputMessage">
+    <wsdl:part name="parameters" element="UnlockAspUser" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_UnlockAspUser_OutputMessage">
+    <wsdl:part name="parameters" element="UnlockAspUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_SaveAspUser_InputMessage">
+    <wsdl:part name="parameters" element="SaveAspUser" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_SaveAspUser_OutputMessage">
+    <wsdl:part name="parameters" element="SaveAspUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_ChangePassword_InputMessage">
+    <wsdl:part name="parameters" element="ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_ChangePassword_OutputMessage">
+    <wsdl:part name="parameters" element="ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_ListContactInformation_InputMessage">
+    <wsdl:part name="parameters" element="ListContactInformation" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_ListContactInformation_OutputMessage">
+    <wsdl:part name="parameters" element="ListContactInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_SaveContactInformation_InputMessage">
+    <wsdl:part name="parameters" element="SaveContactInformation" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_SaveContactInformation_OutputMessage">
+    <wsdl:part name="parameters" element="SaveContactInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_ListCustomer_InputMessage">
+    <wsdl:part name="parameters" element="ListCustomer" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_ListCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="ListCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_SaveCustomer_InputMessage">
+    <wsdl:part name="parameters" element="SaveCustomer" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_SaveCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="SaveCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_ListModule_InputMessage">
+    <wsdl:part name="parameters" element="ListModule" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_ListModule_OutputMessage">
+    <wsdl:part name="parameters" element="ListModuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_ListModulesOfPackage_InputMessage">
+    <wsdl:part name="parameters" element="ListModulesOfPackage" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_ListModulesOfPackage_OutputMessage">
+    <wsdl:part name="parameters" element="ListModulesOfPackageResponse" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_ListAdditionalContractModules_InputMessage">
+    <wsdl:part name="parameters" element="ListAdditionalContractModules" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_ListAdditionalContractModules_OutputMessage">
+    <wsdl:part name="parameters" element="ListAdditionalContractModulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_SaveModule_InputMessage">
+    <wsdl:part name="parameters" element="SaveModule" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_SaveModule_OutputMessage">
+    <wsdl:part name="parameters" element="SaveModuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_ListPackage_InputMessage">
+    <wsdl:part name="parameters" element="ListPackage" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_ListPackage_OutputMessage">
+    <wsdl:part name="parameters" element="ListPackageResponse" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_SavePackage_InputMessage">
+    <wsdl:part name="parameters" element="SavePackage" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_SavePackage_OutputMessage">
+    <wsdl:part name="parameters" element="SavePackageResponse" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_ListCompetitorSource_InputMessage">
+    <wsdl:part name="parameters" element="ListCompetitorSource" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_ListCompetitorSource_OutputMessage">
+    <wsdl:part name="parameters" element="ListCompetitorSourceResponse" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_ListContractCompetitorSources_InputMessage">
+    <wsdl:part name="parameters" element="ListContractCompetitorSources" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_ListContractCompetitorSources_OutputMessage">
+    <wsdl:part name="parameters" element="ListContractCompetitorSourcesResponse" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_SaveCompetitorSource_InputMessage">
+    <wsdl:part name="parameters" element="SaveCompetitorSource" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_SaveCompetitorSource_OutputMessage">
+    <wsdl:part name="parameters" element="SaveCompetitorSourceResponse" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_ListCountry_InputMessage">
+    <wsdl:part name="parameters" element="ListCountry" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_ListCountry_OutputMessage">
+    <wsdl:part name="parameters" element="ListCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_ListContract_InputMessage">
+    <wsdl:part name="parameters" element="ListContract" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_ListContract_OutputMessage">
+    <wsdl:part name="parameters" element="ListContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_SaveContracts_InputMessage">
+    <wsdl:part name="parameters" element="SaveContracts" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_SaveContracts_OutputMessage">
+    <wsdl:part name="parameters" element="SaveContractsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_SaveContract_InputMessage">
+    <wsdl:part name="parameters" element="SaveContract" />
+  </wsdl:message>
+  <wsdl:message name="SynergiLicensingService_SaveContract_OutputMessage">
+    <wsdl:part name="parameters" element="SaveContractResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SynergiLicensingService">
+    <wsdl:operation name="SelectSessionId">
+      <wsdl:input wsaw:Action="urn:SynergiLicensingService/SelectSessionId" message="SynergiLicensingService_SelectSessionId_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SynergiLicensingService/SelectSessionIdResponse" message="SynergiLicensingService_SelectSessionId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGlobalVariable">
+      <wsdl:input wsaw:Action="urn:SynergiLicensingService/GetGlobalVariable" message="SynergiLicensingService_GetGlobalVariable_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SynergiLicensingService/GetGlobalVariableResponse" message="SynergiLicensingService_GetGlobalVariable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppSettings">
+      <wsdl:input wsaw:Action="urn:SynergiLicensingService/GetAppSettings" message="SynergiLicensingService_GetAppSettings_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SynergiLicensingService/GetAppSettingsResponse" message="SynergiLicensingService_GetAppSettings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserLogin">
+      <wsdl:input wsaw:Action="urn:SynergiLicensingService/GetUserLogin" message="SynergiLicensingService_GetUserLogin_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SynergiLicensingService/GetUserLoginResponse" message="SynergiLicensingService_GetUserLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAspUser">
+      <wsdl:input wsaw:Action="urn:SynergiLicensingService/GetAspUser" message="SynergiLicensingService_GetAspUser_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SynergiLicensingService/GetAspUserResponse" message="SynergiLicensingService_GetAspUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListAspUser">
+      <wsdl:input wsaw:Action="urn:SynergiLicensingService/ListAspUser" message="SynergiLicensingService_ListAspUser_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SynergiLicensingService/ListAspUserResponse" message="SynergiLicensingService_ListAspUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnlockAspUser">
+      <wsdl:input wsaw:Action="urn:SynergiLicensingService/UnlockAspUser" message="SynergiLicensingService_UnlockAspUser_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SynergiLicensingService/UnlockAspUserResponse" message="SynergiLicensingService_UnlockAspUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAspUser">
+      <wsdl:input wsaw:Action="urn:SynergiLicensingService/SaveAspUser" message="SynergiLicensingService_SaveAspUser_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SynergiLicensingService/SaveAspUserResponse" message="SynergiLicensingService_SaveAspUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input wsaw:Action="urn:SynergiLicensingService/ChangePassword" message="SynergiLicensingService_ChangePassword_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SynergiLicensingService/ChangePasswordResponse" message="SynergiLicensingService_ChangePassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListContactInformation">
+      <wsdl:input wsaw:Action="urn:SynergiLicensingService/ListContactInformation" message="SynergiLicensingService_ListContactInformation_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SynergiLicensingService/ListContactInformationResponse" message="SynergiLicensingService_ListContactInformation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveContactInformation">
+      <wsdl:input wsaw:Action="urn:SynergiLicensingService/SaveContactInformation" message="SynergiLicensingService_SaveContactInformation_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SynergiLicensingService/SaveContactInformationResponse" message="SynergiLicensingService_SaveContactInformation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListCustomer">
+      <wsdl:input wsaw:Action="urn:SynergiLicensingService/ListCustomer" message="SynergiLicensingService_ListCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SynergiLicensingService/ListCustomerResponse" message="SynergiLicensingService_ListCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCustomer">
+      <wsdl:input wsaw:Action="urn:SynergiLicensingService/SaveCustomer" message="SynergiLicensingService_SaveCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SynergiLicensingService/SaveCustomerResponse" message="SynergiLicensingService_SaveCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListModule">
+      <wsdl:input wsaw:Action="urn:SynergiLicensingService/ListModule" message="SynergiLicensingService_ListModule_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SynergiLicensingService/ListModuleResponse" message="SynergiLicensingService_ListModule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListModulesOfPackage">
+      <wsdl:input wsaw:Action="urn:SynergiLicensingService/ListModulesOfPackage" message="SynergiLicensingService_ListModulesOfPackage_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SynergiLicensingService/ListModulesOfPackageResponse" message="SynergiLicensingService_ListModulesOfPackage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListAdditionalContractModules">
+      <wsdl:input wsaw:Action="urn:SynergiLicensingService/ListAdditionalContractModules" message="SynergiLicensingService_ListAdditionalContractModules_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SynergiLicensingService/ListAdditionalContractModulesResponse" message="SynergiLicensingService_ListAdditionalContractModules_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveModule">
+      <wsdl:input wsaw:Action="urn:SynergiLicensingService/SaveModule" message="SynergiLicensingService_SaveModule_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SynergiLicensingService/SaveModuleResponse" message="SynergiLicensingService_SaveModule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListPackage">
+      <wsdl:input wsaw:Action="urn:SynergiLicensingService/ListPackage" message="SynergiLicensingService_ListPackage_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SynergiLicensingService/ListPackageResponse" message="SynergiLicensingService_ListPackage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePackage">
+      <wsdl:input wsaw:Action="urn:SynergiLicensingService/SavePackage" message="SynergiLicensingService_SavePackage_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SynergiLicensingService/SavePackageResponse" message="SynergiLicensingService_SavePackage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListCompetitorSource">
+      <wsdl:input wsaw:Action="urn:SynergiLicensingService/ListCompetitorSource" message="SynergiLicensingService_ListCompetitorSource_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SynergiLicensingService/ListCompetitorSourceResponse" message="SynergiLicensingService_ListCompetitorSource_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListContractCompetitorSources">
+      <wsdl:input wsaw:Action="urn:SynergiLicensingService/ListContractCompetitorSources" message="SynergiLicensingService_ListContractCompetitorSources_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SynergiLicensingService/ListContractCompetitorSourcesResponse" message="SynergiLicensingService_ListContractCompetitorSources_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCompetitorSource">
+      <wsdl:input wsaw:Action="urn:SynergiLicensingService/SaveCompetitorSource" message="SynergiLicensingService_SaveCompetitorSource_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SynergiLicensingService/SaveCompetitorSourceResponse" message="SynergiLicensingService_SaveCompetitorSource_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListCountry">
+      <wsdl:input wsaw:Action="urn:SynergiLicensingService/ListCountry" message="SynergiLicensingService_ListCountry_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SynergiLicensingService/ListCountryResponse" message="SynergiLicensingService_ListCountry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListContract">
+      <wsdl:input wsaw:Action="urn:SynergiLicensingService/ListContract" message="SynergiLicensingService_ListContract_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SynergiLicensingService/ListContractResponse" message="SynergiLicensingService_ListContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveContracts">
+      <wsdl:input wsaw:Action="urn:SynergiLicensingService/SaveContracts" message="SynergiLicensingService_SaveContracts_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SynergiLicensingService/SaveContractsResponse" message="SynergiLicensingService_SaveContracts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveContract">
+      <wsdl:input wsaw:Action="urn:SynergiLicensingService/SaveContract" message="SynergiLicensingService_SaveContract_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SynergiLicensingService/SaveContractResponse" message="SynergiLicensingService_SaveContract_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

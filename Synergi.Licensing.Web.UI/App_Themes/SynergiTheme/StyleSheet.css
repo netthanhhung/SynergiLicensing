@@ -1,0 +1,860 @@
+﻿/*#333333 the dark blue*/
+/*#3F3E40 the mid to dark blue*/
+/*#cbd6e4 the mid blue*/
+/*#ffd2ae the pale blue*/
+/*#fe7200 the orange*/
+/*#ffd2ae the pale orange*/
+/*#f8f8ff ghost white*/
+/*#696969 dimgray*/
+/**************** STANDARD CLASSES **************/
+ HTML, FORM,TABLE, TR, TD, IMG
+{
+	border-style: none;
+    border-width: 0px;
+    border-color: White;
+    xtable-layout: fixed;
+    padding: 0px;
+    margin: 0px;        
+    border-collapse: collapse;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+BODY
+{
+	background-color: #333333;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+}
+
+h1
+{
+	font-family:Arial;
+	font-size:large;
+	font-weight:700;
+	color:#333333;
+}
+
+Select
+{
+	width: 100%;
+}
+
+/****************** CUSTOM CLASSES **************/
+.alignDropDownList 
+{
+	/* This Class is used to pad the cell containing a dropdownlist so that is aligns with other controls i.e. text box */
+	padding-left: 10px;
+	padding-right: 4px;
+	
+}
+
+.inputText
+{
+	width: 100%;
+}
+
+/******** Blue Table ********/
+table.Blue
+{
+	width:200px;
+	border: solid 1px #333333;
+	color: #333333;
+	font-family:Arial;
+	font-size:small;
+	font-weight:bolder;
+	
+	/*border-collapse: collapse;*/
+	background-color:#fefefe;
+}
+
+table.Blue tr td
+{
+	border-top: solid 1px #333333;
+	border-bottom: solid 1px #333333;
+	padding: 3px 10px 3px 10px;
+	
+}
+
+tr.BlueHeader
+{
+	background-color: #333333;	
+	color:White;
+	font-weight: bold;
+}
+/******** END - Blue Table *********/
+
+/*********  Blue Table with Curved Borders *********/
+table.BlueFullWidth
+{
+	width: 100%;
+	font-family:Arial, Tahoma;
+	font-size:small;
+	border-collapse: collapse;
+	background-color:#fefefe;
+}
+table.BlueFullWidth col.Sized
+{
+	width: 6px;
+}
+/* Header Row/Cells */
+table.BlueFullWidth tr.RowTop
+{
+	height: 23px;	
+}
+table.BlueFullWidth tr.RowHeader
+{
+	height: 20px;	
+}
+table.BlueFullWidth td.BorderTopLeft
+{
+	background-image: url(../../Images/gg.gif);
+}
+
+table.BlueFullWidth td.Header
+{
+	/*background-color: #231F20;*/
+	background-image: url(../../Images/gg.gif);
+	color: White; 
+	font-weight: bold;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+table.BlueFullWidth td.BorderTopRight
+{
+	background-image: url(../../Images/gg.gif);
+}
+
+/* Body Cells */
+table.BlueFullWidth td.BorderMiddleLeft
+{
+    background: transparent url(../../Images/BorderMiddleLeft.gif) center left repeat-y;
+}
+table.BlueFullWidth td.Body
+{
+	 padding: 10px 10px 10px 10px;
+}
+table.BlueFullWidth td.BodyRow
+{
+	 padding: 3px 10px 3px 10px;
+}
+table.BlueFullWidth td.FirstBodyRow
+{
+	 padding: 10px 10px 3px 10px;
+}
+table.BlueFullWidth td.BorderMiddleRight
+{
+    background: transparent url(../../Images/BorderMiddleRight.gif) center right repeat-y;
+}
+
+/* Footer Row/Cells */
+table.BlueFullWidth tr.RowBottom
+{
+	height: 6px;	
+}
+table.BlueFullWidth td.BorderBottomLeft
+{
+    background: transparent url(../../Images/BorderBottomLeft.gif) bottom left no-repeat;
+}
+
+table.BlueFullWidth td.BorderBottomMiddle
+{
+	background-image: url(../../Images/BorderBottomMiddle.gif);
+}
+
+table.BlueFillWidth: td.BorderDivider;
+{
+	background-color: #333333;
+}
+
+table.BlueFullWidth td.BorderBottomRight
+{
+    background: transparent url(../../Images/BorderBottomRight.gif) bottom right no-repeat;
+}
+
+/*********  END - Blue Table with Curved Borders *********/
+
+/*********  Blue Table with THIN Curved Borders *********/
+table.BlueThinFullWidth
+{
+	width: 100%;
+	font-family:Arial, Tahoma;
+	font-size:small;
+	border-collapse: collapse;
+	background-color:#fefefe;
+}
+table.BlueThinFullWidth col.Sized
+{
+	width: 6px;
+}
+/* Header Row/Cells */
+table.BlueThinFullWidth tr.RowTop
+{
+	height: 23px;	
+}
+table.BlueThinFullWidth td.BorderTopLeft
+{
+	background-image: url(../../Images/gg.gif);
+}
+
+table.BlueThinFullWidth td.Header
+{
+	/*background-color: #231F20;*/
+	background-image: url(../../Images/gg.gif);
+	color: White; 
+	font-weight: bold;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+table.BlueThinFullWidth td.BorderTopRight
+{
+	background-image: url(../../Images/gg.gif);
+}
+
+/* Body Cells */
+table.BlueThinFullWidth td.BorderMiddleLeft
+{
+    background: transparent url(../../Images/ThinBorderMiddleLeft.gif) center left repeat-y;
+}
+table.BlueThinFullWidth td.Body
+{
+	 padding: 3px 10px 3px 10px;
+}
+table.BlueThinFullWidth td.BorderMiddleRight
+{
+    background: transparent url(../../Images/ThinBorderMiddleRight.gif) center right repeat-y;
+}
+
+/* Footer Row/Cells */
+table.BlueThinFullWidth tr.RowBottom
+{
+	height: 5px;	
+}
+table.BlueThinFullWidth td.BorderBottomLeft
+{
+    background: transparent url(../../Images/ThinBorderBottomLeft.gif) bottom left no-repeat;
+}
+
+table.BlueThinFullWidth td.BorderBottomMiddle
+{
+    width:263px;
+	background-image: url(../../Images/ThinBorderBottomMiddle.gif);
+}
+
+table.BlueThinFullWidth td.BorderBottomRight
+{
+    background: transparent url(../../Images/ThinBorderBottomRight.gif) bottom right no-repeat;
+}
+
+/*********  END - Blue Table with THIN Curved Borders *********/
+
+/*********  Pale Blue Table with Curved Borders *********/
+
+table.PaleBlueFullWidth
+{
+	width: 100%;
+	font-family:Arial, Tahoma;
+	font-size:small;
+	border-collapse: collapse;
+	background-color: #e0eaf6;
+}
+table.PaleBlueFullWidth col.Sized
+{
+	width: 6px;
+}
+/* Header Row/Cells */
+table.PaleBlueFullWidth tr.RowTop
+{
+	height: 6px;	
+}
+table.PaleBlueFullWidth td.BorderTopLeft
+{
+	background-image: url(../../Images/PaleBlueBorderTopLeft.gif);
+}
+
+table.PaleBlueFullWidth td.Header
+{
+	background-image: url(../../Images/PaleBlueBorderTopMiddle.gif);
+}
+
+table.PaleBlueFullWidth td.BorderTopRight
+{
+	background-image: url(../../Images/PaleBlueBorderTopRight.gif);
+}
+
+/* Body Cells */
+table.PaleBlueFullWidth td.BorderMiddleLeft
+{
+	background-image: url(../../Images/PaleBlueBorderMiddleLeft.gif);
+}
+table.PaleBlueFullWidth td.Body
+{
+	 padding: 0px 0px 0px 0px;
+}
+table.PaleBlueFullWidth td.BorderMiddleRight
+{
+	background-image: url(../../Images/PaleBlueBorderMiddleRight.gif);
+}
+
+/* Footer Row/Cells */
+table.PaleBlueFullWidth tr.RowBottom
+{
+	height: 6px;	
+}
+table.PaleBlueFullWidth td.BorderBottomLeft
+{
+	background-image: url(../../Images/PaleBlueBorderBottomLeft.gif);
+}
+
+table.PaleBlueFullWidth td.BorderBottomMiddle
+{
+	background-image: url(../../Images/PaleBlueBorderBottomMiddle.gif);
+}
+
+table.PaleBlueFullWidth td.BorderBottomRight
+{
+	background-image: url(../../Images/PaleBlueBorderBottomRight.gif);
+}
+
+/*********  END - Pale Blue Table with Curved Borders *********/
+
+/************ Change Password Styles ***************/
+.ChangePasswordLabelCell
+{
+	width: 150px;
+	height: 35px;
+}
+.ChangePasswordTextBoxCell
+{
+	width: 160px;
+	text-align: right;
+}
+.ChangePasswordTextBox
+{
+	width: 140px;	
+}
+.ChangePasswordButtonsCell
+{
+	text-align: right;	
+}
+/************ END - Change Password Styles ***************/
+
+.MainLabel
+{
+	color: #333333;
+}
+
+.GridStyleTable
+{
+	color:#003399;
+	background-color:White;
+	border-color:#3F3E40;
+	border-width:1px;
+	border-style:Solid;
+	font-family:Arial,Tahoma,Sans-Serif;
+	font-size:10pt;
+	border-collapse:collapse;
+}
+
+/********* Gridview standard classes **********/
+.Grid td
+{
+	border: solid 0px white;
+	color: #696969;
+	padding-left: 2px;
+	padding-right: 6px;
+}
+.GridHeader th
+{
+	border-top: solid 0px white;
+	border-left: solid 0px white;
+	border-right: solid 0px white;
+	border-bottom: solid 1px #3F3E40;
+	font-weight: bold;
+	color: white;
+	background-color: #3F3E40;
+	position: relative; 
+    top: expression(this.scrollTop);
+    z-index: 10;
+}
+.GridHeader
+{
+
+}
+
+.GridAlt td
+{
+	border: solid 0px white;
+	color: #696969;
+	background-color: #ffd2ae;
+	padding-left: 2px;
+	padding-right: 6px;
+}
+.GridSelected td
+{
+	border: solid 0px white;
+	color: #696969;
+	background-color: #fee5d2;
+	padding-left: 2px;
+	padding-right: 6px;	
+}
+
+.GridFooter td
+{
+	border-top: solid 1px #3F3E40;
+	border-left: solid 0px white;
+	border-right: solid 0px white;
+	border-bottom: solid 0px white;
+	text-align: left;
+	color: #696969;
+	background-color: #3F3E40;
+	padding-left: 2px;
+	padding-right: 6px;
+}
+.GridFooter table td
+{
+	border-style: none;
+	border-width: 0px;
+	padding-left: 2px;
+	padding-right: 6px;	
+}
+
+.GridFooter a
+{
+	color: White;
+}
+
+.GridPager td
+{
+	border-top: solid 1px #3F3E40;
+	border-left: solid 0px white;
+	border-right: solid 0px white;
+	border-bottom: solid 0px white;
+	text-align: left;
+	padding-left: 2px;
+	padding-right: 6px;
+}
+
+.GridPager table td
+{
+	border-style: none;
+	border-width: 0px;
+	padding-left: 2px;
+	padding-right: 6px;
+}
+.GridEmptyRow td
+{
+	color: #696969;
+}
+
+.unsorted
+{
+    background-image: none;
+}
+.sortedAscending
+{
+    background-image: url(images/SortAsc.gif) ;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.sortedDescending
+{
+    background-image: url(images/SortDesc.gif);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.currentPage
+{
+	font-weight: bold;	
+}
+.noData
+{
+	color: Black;	
+}
+/********* END Gridview standard classes **********/
+
+/********* Grid tables - Use this class for tables when you want them to look like the gridview **********/
+/**Tash Here**/
+table.GridOuterTable
+{
+	width: 100%;
+	border: solid 1px #3F3E40;
+	background-color: White;
+	font-size: 10pt;  	
+	color: #696969;	
+}
+
+table.GridOuterTable td
+{
+	padding: 3px 1px 3px 1px;
+}
+
+.GridOuterTable th
+{
+	border-top: solid 0px white;
+	border-left: solid 0px white;
+	border-right: solid 0px white;
+	border-bottom: solid 1px #3F3E40;
+	font-weight: normal;
+	color: White;
+	background-color: #BAECC0;
+	position: relative; 
+    top: expression(this.scrollTop);
+    z-index: 10;
+}
+.GridCellAsColHeader
+{
+	border-bottom: solid 1px #3F3E40;
+	font-weight: normal;
+	color: white;
+	background-color: #3F3E40;
+	position: relative; 
+    top: expression(this.scrollTop);
+    z-index: 10;
+    text-align: center;
+    font-weight: bold;
+}
+.GridCellAsRowHeader
+{
+	border-right: solid 1px #3F3E40;
+	font-weight: normal;
+	color: white;
+	background-color: #3F3E40;
+	position: relative; 
+    top: expression(this.scrollTop);
+    z-index: 10;
+    text-align: left;
+    font-weight: bold;
+}
+.GridCellAsCornerHeader
+{
+	font-weight: normal;
+	color: white;
+	background-color: #3F3E40;
+	position: relative; 
+    top: expression(this.scrollTop);
+    z-index: 10;
+    text-align: center;
+    font-weight: bold;
+}
+
+.TotalCell
+{
+	 border-top: solid 1px #3F3E40; 
+	 text-align: center;
+}
+
+table.GridOuterTable tr.AltRow
+{
+	 background-color: #ffd2ae;
+
+}
+
+
+/******** END - Grid tables of class for tables when you want them to look like the gridview ********/
+
+/* Info Box classes */
+.InfoContainer
+{
+	background-color: #F8F8FF;
+	border: 1px solid lavender;
+    margin-top: 0px;
+    padding: 2px 5px 0px 6px;
+}
+.InfoImage
+{
+	margin-top: 0px;
+	margin-bottom: 0px; 
+	margin-right: 5px;	
+}
+.InfoText
+{
+	color: #919B9C;
+	font-size: 9pt;
+}
+/* END Info Box classes */
+
+.RememberMe
+{
+	 padding-left: 76px;	
+}
+
+/************ Menu ***************/
+
+.MenuDiv
+{
+	margin-top: -1px;
+	z-index: 9999;
+}
+
+.MenuDiv DIV
+{
+	z-index: 9999;
+}
+
+.Menu
+{
+    font-family: Arial, Tahoma;
+    font-size: Small;
+    font-weight: bold;
+}
+
+.StaticMenuItemStyle 
+{
+	padding-left: 10px;
+	border-left: solid 1px #333333;
+	border-right: solid 1px #333333;
+	border-top: solid 1px #333333;
+	background-color: White;
+	width: 275px;
+	height: 25px;
+}
+
+/*Must keep this after StaticMenuItemStyle otherwise won't work*/
+.StaticSelectedStyle
+{
+	background-color: #ffd2ae;	
+}
+.StaticHoverStyle
+{
+	background-color: #cbd6e4;
+	
+}
+.DynamicMenuStyle
+{
+	border-left: solid 1px #333333;
+	border-right: solid 1px #333333;
+	border-bottom: solid 1px #333333;
+	background-color: White;
+	width: 275px;
+	font-family: Arial, Tahoma;
+    font-size: Small;
+    font-weight: bold;
+}
+
+.DynamicMenuItemStyle
+{
+	border-top: solid 1px #333333;
+	background-color: White;
+	width: 275px;
+	height: 25px;
+	padding-left: 8px;
+	
+}
+
+.DynamicSelectedStyle
+{
+	background-color: #ffd2ae;
+}
+
+.DynamicHoverStyle
+{
+	background-color: #cbd6e4;
+}
+
+/************ END - Menu ***************/
+/********** Table Events Full Width No Padding ********/
+table.EventsFullWidth
+{
+	width: 100%;
+	border: 0px none transparent;
+}
+table.EventsFullWidth td
+{
+	padding: 0px 1px 0px 1px;
+}
+
+/********** Table Transparent Full Width Minium Padding ********/
+table.TransparentFullWidthMinPadding
+{
+	width: 100%;
+	border: 0px none transparent;
+}
+table.TransparentFullWidthMinPadding td
+{
+	padding: 3px 1px 3px 1px;
+}
+
+/******** Timeclock Header **********/
+table.Header
+{
+	width: 100%;	
+}
+/*
+table.Header td.Image
+{
+	width: 246px;	
+}*/
+
+.HeaderToolbar
+{
+	display: inline;		
+	float: right;
+	position: absolute;	
+	height: 55px;	
+	right: 30px;
+	top: 30px;
+	text-align:right;
+}
+
+table.Header td.Gradient
+{
+	background-color: #fe7200;  
+	/*filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#fe7200', EndColorStr='#ffffff');*/
+}
+
+/******** END - Timeclock Header **********/
+
+table.Sidebar
+{
+	width: 275px;
+	padding: none;
+	border: none;
+}
+
+/******** Transparent Table Full Width ********/
+table.TransparentStandardWidth
+{
+	width: 740px;
+	border: 0px none transparent;
+}
+table.TransparentFullWidth
+{
+	width: 100%;
+	border: 0px none transparent;
+}
+table.TransparentFullWidth td
+{
+	padding: 3px 10px 3px 10px;
+}
+table.TransparentFullWidthLessPadding
+{
+	width: 100%;
+	border: 0px none transparent;
+}
+table.TransparentFullWidthLessPadding td
+{
+	padding: 3px 7px 3px 3px;
+}
+/******** END - Transparent Table Full Width ********/
+.validator
+{
+	 font-family: Arial;
+	 font-size: 8pt;
+	 color: red;
+}
+.InputTime
+{
+	text-align: center;	
+}
+.smallControl
+{
+	font: normal 11px Arial, Verdana, Tahoma, Sans-Serif;
+	color: #242424;
+	background: white;
+	border: solid 1px #c6c6c6;
+	vertical-align: middle;	
+	text-align: center;
+}
+
+.smallControl2 /* No Centre Align */
+{
+	font: normal 11px Arial, Verdana, Tahoma, Sans-Serif;
+	color: #242424;
+	background: white;
+	border: solid 1px #c6c6c6;
+	width: 100%;
+}
+
+.smallControlNoBorder
+{
+	font: normal 11px Arial, Verdana, Tahoma, Sans-Serif;
+	color: #242424;
+	background: white;
+	border: solid 1px white;
+	vertical-align: middle;	
+	text-align: center;
+}
+.TimeCol
+{
+    width: 39px;
+}
+.SpacerCol
+{
+	width: 7px;	
+}
+
+.Outline
+{
+	border: 1px solid #8e8e8e;
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	padding-left: 5px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.rdfd_ { position:absolute !important }
+
+.rcInputCell 
+{
+	width:80% !important; 
+} 
+
+.RadPicker_Default table.rcTable TD
+{
+	padding-left:0px;
+} 
+
+.rcTitle
+{
+	width: 50% !important;
+} 
+
+
+
+.collapsePanel {
+	height: 0px;
+	overflow: hidden;
+}
+
+.collapsePanelHeader	
+{
+	width: 100%;
+	height: 20px;
+	font-weight: bold;
+	float: left;
+	padding: 2px 5px 2px 5px;
+	cursor: pointer; 
+	vertical-align: middle;
+	/*border: 1px solid #8e8e8e;*/
+}
+
+#silverlightControlHost 
+{
+	height: 100%;
+	text-align:center;
+	min-width: 1280px;
+}
+
+/*********  Content Layouts Template *********/
+
+table.ThreeColForm .LabelSmall {
+    width: 100px;
+}
+
+table.ThreeColForm .DropDownList {
+    width: 395px;
+}
+
+table.ThreeColForm div.Col1 {
+    float:left;
+    width:263px;
+}
+
+/*********  END - Content Layouts Template *********/

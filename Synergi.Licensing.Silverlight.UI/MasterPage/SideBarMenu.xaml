@@ -1,0 +1,19 @@
+﻿<UserControl
+    x:Class="Synergi.Licensing.Silverlight.UI.SideBarMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:telerikNavigation="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Navigation">
+
+    <Grid>
+        <telerikNavigation:RadMenu
+            x:Name="uiMenu"
+            Orientation="Vertical"
+            VerticalContentAlignment="Center"
+            Background="{StaticResource DefaultBackgroundBrush}"
+            Foreground="White"
+            FontSize="20"
+            ItemTemplate="{StaticResource RadMenuItemTemplate}"
+            ItemContainerStyle="{StaticResource RadMenuItemContainerStyle}"           />
+    </Grid>
+
+</UserControl>

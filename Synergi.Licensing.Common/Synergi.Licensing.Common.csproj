@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FCE18E85-6A08-4C2E-A04F-7E098B29DCAA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Synergi.Licensing.Common</RootNamespace>
+    <AssemblyName>Synergi.Licensing.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AspRole.cs" />
+    <Compile Include="AspUser.cs" />
+    <Compile Include="CompetitorSource.Generated.cs" />
+    <Compile Include="CompetitorSource.SqlParameters.cs" />
+    <Compile Include="ContactInformation.cs" />
+    <Compile Include="ContactInformation.SqlParameters.cs" />
+    <Compile Include="Contract.Extended.cs" />
+    <Compile Include="Contract.Generated.cs" />
+    <Compile Include="Contract.SqlParameters.cs" />
+    <Compile Include="ContractCompetitorSource.Generated.cs" />
+    <Compile Include="ContractCompetitorSource.SqlParameters.cs" />
+    <Compile Include="ContractModule.Generated.cs" />
+    <Compile Include="ContractModule.SqlParameters.cs" />
+    <Compile Include="Country.Generated.cs" />
+    <Compile Include="Country.SqlParameters.cs" />
+    <Compile Include="ModulePackage.Generated.cs" />
+    <Compile Include="ModulePackage.SqlParameters.cs" />
+    <Compile Include="Package.Extended.cs" />
+    <Compile Include="Package.Generated.cs" />
+    <Compile Include="Package.SqlParameters.cs" />
+    <Compile Include="Module.Generated.cs" />
+    <Compile Include="Module.SqlParameters.cs" />
+    <Compile Include="Customer.Extended.cs" />
+    <Compile Include="Customer.Generated.cs" />
+    <Compile Include="Customer.SqlParameters.cs" />
+    <Compile Include="DeploymentInfo.cs" />
+    <Compile Include="Factory.cs" />
+    <Compile Include="PeriodType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Record.cs" />
+    <Compile Include="Record.SqlParameters.cs" />
+    <Compile Include="Utilities.cs" />
+    <Compile Include="Utilities.SqlParameters.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

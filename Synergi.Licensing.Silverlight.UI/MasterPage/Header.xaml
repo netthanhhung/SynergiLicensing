@@ -1,0 +1,78 @@
+﻿<UserControl
+    x:Class="Synergi.Licensing.Silverlight.UI.Header"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Synergi.Licensing.Silverlight.UI"
+    xmlns:telerik="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls"
+    xmlns:telerikNavigation="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Navigation">
+    <Grid>
+
+        <Border
+            BorderThickness="0,0,0,1"
+            BorderBrush="{StaticResource DefaultBackgroundGradientStartBrush}">
+
+            <Grid
+                VerticalAlignment="Bottom"
+                Background="{StaticResource DefaultBackgroundBrush}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackPanel
+                    Orientation="Horizontal"
+                    VerticalAlignment="Bottom">
+                    <Button x:Name="uiBtnLogo" Margin="0" Padding="0">
+                        <Button.Content>
+                            <Grid>
+                                <Image x:Name="uiLogo"
+                                Source="/Synergi.Licensing.Silverlight.UI;component/Images/SynergiLicensing.png"
+                                Margin="0"></Image>
+
+                                <!--<TextBlock
+                                x:Name="uiDeploymentInfo"
+                                Foreground="#BBA598"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Bottom"
+                                FontSize="12"></TextBlock>-->
+                            </Grid>
+                        </Button.Content>
+                        <telerikNavigation:RadContextMenu.ContextMenu>
+                            <telerikNavigation:RadContextMenu 
+                        x:Name="uiContextMenu"   
+                        EventName="Click"            
+                        VerticalContentAlignment="Center"
+                        Foreground="White"
+                        FontSize="12"
+                        Style="{StaticResource RadContextMenuStyle}" 
+                        ItemTemplate="{StaticResource RadMenuItemTemplate}"
+                        ItemContainerStyle="{StaticResource RadMenuItemContainerStyle}"
+                        ItemClick="uiContextMenu_ItemClick" 
+                        VerticalOffset="10"
+                        HorizontalOffset="5">
+                            </telerikNavigation:RadContextMenu>
+                        </telerikNavigation:RadContextMenu.ContextMenu>
+                    </Button>
+
+                    <local:HeaderMenuButton
+                        x:Name="uiCustomer"
+                        InnerText="[c]ustomer"
+                        HighlightBrush="{StaticResource CustomerBrush}"></local:HeaderMenuButton>
+                    <!--<local:HeaderMenuButton
+                        x:Name="uiContract"
+                        InnerText="[c]ontract"
+                        HighlightBrush="{StaticResource ContractBrush}"></local:HeaderMenuButton>-->
+                    
+                </StackPanel>
+
+                <TextBlock
+                    x:Name="uiDeploymentInfo"
+                    Grid.Column="1"
+                    Foreground="#BBA598"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,6,0"
+                    FontSize="8"></TextBlock>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

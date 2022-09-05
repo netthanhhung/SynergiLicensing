@@ -1,0 +1,63 @@
+﻿<UserControl
+    x:Class="Synergi.Licensing.Silverlight.UI.Logo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:BlackLight="clr-namespace:Blacklight.Controls;assembly=Blacklight.Controls">
+    <Grid>
+        <BlackLight:InnerGlowBorder
+            x:Name="uiInnerGlowBorder"
+            Height="90"
+            MinWidth="170"
+            ClipContent="True"
+            CornerRadius="16,16,0,0"
+            InnerGlowColor="{StaticResource DefaultBackgroundColour}"
+            InnerGlowSize="10,10,10,0"
+            Background="#FFFF7200">
+
+            <Grid
+                x:Name="uiContent"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" 
+                            Grid.Column="0"
+                            Foreground="White"
+                            Margin="15,0,0,0"
+                            Height="90"
+                            Text="ezy"
+                            FontSize="24"
+                            FontFamily="Verdana"
+                            FontWeight="Bold"
+                            VerticalAlignment="Top"/>
+
+                <TextBlock Grid.Row="0" 
+                           Grid.Column="1"
+                            Foreground="White"
+                            Margin="0,0,15,0"
+                            Height="90"
+                            Text="Software"
+                            FontSize="24"
+                            FontFamily="Verdana" 
+                           VerticalAlignment="Top"/>
+
+                <TextBlock x:Name="uiDeploymentInfo" Grid.Row="1"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="2"
+                           FontSize="10"  
+                           Foreground="#9e5418" HorizontalAlignment="Center"></TextBlock>
+
+            </Grid>
+
+        </BlackLight:InnerGlowBorder>
+    </Grid>
+</UserControl>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode
+	title="Logo"
+	description="Synergi Licensing Logo">
+	<siteMapNode
+	  url="/HomePage.xaml"
+	  title="Home"
+	  description="Home Page"/>
+	<siteMapNode
+	  url="Logon.aspx?Logout=true"
+	  title="Logout"
+	  description="Logout"/>
+    <siteMapNode
+	  url="/Administration/ChangePasswordPage.xaml"
+	  title="Change Password"
+	  description="Change Password"/>
+	<siteMapNode
+	  url="/Administration/UserAccountPage.xaml"
+	  title="User Account Administration"
+	  description="User Account Administration"/>	
+	<siteMapNode
+	  url="/Administration/ModuleAdminPage.xaml"
+	  title="Module Administration"
+	  description="Module Administration"/>
+	<siteMapNode
+	  url="/Administration/PackageAdminPage.xaml"
+	  title="Package Administration"
+	  description="Package Administration"/>
+  </siteMapNode>
+
+  <siteMapNode
+	title="Customer"
+	description="Customer Administration">
+
+	<siteMapNode
+		url="/Customer/CustomerAdminPage.xaml"
+		title="Customer Administration"
+		description="Customer Administration"/>    
+  </siteMapNode>
+ 
+  
+</siteMap>

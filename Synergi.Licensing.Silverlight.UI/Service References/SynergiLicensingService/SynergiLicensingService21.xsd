@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:49539/SynergiLicensingService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="AspUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationId" type="ser:guid" />
+      <xs:element minOccurs="0" name="CanDelete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FailedPasswordAnswerAttemptCount" type="xs:int" />
+      <xs:element minOccurs="0" name="FailedPasswordAnswerAttemptWindowStart" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FailedPasswordAttemptCount" type="xs:int" />
+      <xs:element minOccurs="0" name="FailedPasswordAttemptWindowStart" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InputPassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsAnonymous" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsApproved" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsChanged" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDeleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsLockedOut" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsOnline" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsResetPassword" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSavedQAError" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastActivityDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LastLockoutDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LastLoginDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LastPasswordChangedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LoweredEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoweredUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MobileAlias" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MobilePIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NewGenPassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PasswordAnswer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PasswordFormat" type="xs:int" />
+      <xs:element minOccurs="0" name="PasswordQuestion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PasswordSalt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProviderName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProviderUserKey" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="UserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AspUser" nillable="true" type="tns:AspUser" />
+  <xs:complexType name="ArrayOfAspUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AspUser" nillable="true" type="tns:AspUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAspUser" nillable="true" type="tns:ArrayOfAspUser" />
+  <xs:complexType name="ArrayOfContactInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContactInformation" nillable="true" type="tns:ContactInformation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContactInformation" nillable="true" type="tns:ArrayOfContactInformation" />
+  <xs:complexType name="ContactInformation">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Record">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContactInformationId" type="xs:int" />
+          <xs:element minOccurs="0" name="CountryId" type="xs:int" />
+          <xs:element minOccurs="0" name="FaxNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Postcode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ContactInformation" nillable="true" type="tns:ContactInformation" />
+  <xs:complexType name="Record">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CanDelete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Concurrency" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="CreatedAndUpdatedText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateCreated" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateUpdated" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsChanged" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDeleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastUpdatedText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecordId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="RecordInformationText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Record" nillable="true" type="tns:Record" />
+  <xs:complexType name="ArrayOfCustomer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Customer" nillable="true" type="tns:Customer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomer" nillable="true" type="tns:ArrayOfCustomer" />
+  <xs:complexType name="Customer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Record">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BusinessName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContactInformation" nillable="true" type="tns:ContactInformation" />
+          <xs:element minOccurs="0" name="ContactInformationId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Contracts" nillable="true" type="tns:ArrayOfContract" />
+          <xs:element minOccurs="0" name="CustomerId" type="xs:int" />
+          <xs:element minOccurs="0" name="IsLegacy" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NameWithStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShippingContactInformation" nillable="true" type="tns:ContactInformation" />
+          <xs:element minOccurs="0" name="ShippingContactInformationId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Customer" nillable="true" type="tns:Customer" />
+  <xs:complexType name="ArrayOfContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Contract" nillable="true" type="tns:Contract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContract" nillable="true" type="tns:ArrayOfContract" />
+  <xs:complexType name="Contract">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Record">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActivatedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AdditionalModules" nillable="true" type="tns:ArrayOfModule" />
+          <xs:element minOccurs="0" name="AdditionalModulesString" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CompetitorSources" nillable="true" type="tns:ArrayOfCompetitorSource" />
+          <xs:element minOccurs="0" name="CompetitorSourcesString" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContractId" type="xs:int" />
+          <xs:element minOccurs="0" name="Customer" nillable="true" type="tns:Customer" />
+          <xs:element minOccurs="0" name="CustomerId" type="xs:int" />
+          <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DomainName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EncryptedString" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExpiredDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IsLegacy" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LicenseKey" type="ser:guid" />
+          <xs:element minOccurs="0" name="NbrSites" type="xs:int" />
+          <xs:element minOccurs="0" name="Package" nillable="true" type="tns:Package" />
+          <xs:element minOccurs="0" name="PackageId" type="xs:int" />
+          <xs:element minOccurs="0" name="RealEndDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SecondDomainName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TotalPrice" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Contract" nillable="true" type="tns:Contract" />
+  <xs:complexType name="ArrayOfModule">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Module" nillable="true" type="tns:Module" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfModule" nillable="true" type="tns:ArrayOfModule" />
+  <xs:complexType name="Module">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Record">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModuleId" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Module" nillable="true" type="tns:Module" />
+  <xs:complexType name="ArrayOfCompetitorSource">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CompetitorSource" nillable="true" type="tns:CompetitorSource" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompetitorSource" nillable="true" type="tns:ArrayOfCompetitorSource" />
+  <xs:complexType name="CompetitorSource">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Record">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CompetitorSourceId" type="xs:int" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CompetitorSource" nillable="true" type="tns:CompetitorSource" />
+  <xs:complexType name="Package">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Record">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsLegacy" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Modules" nillable="true" type="tns:ArrayOfModule" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PackageId" type="xs:int" />
+          <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Package" nillable="true" type="tns:Package" />
+  <xs:complexType name="ArrayOfPackage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Package" nillable="true" type="tns:Package" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPackage" nillable="true" type="tns:ArrayOfPackage" />
+  <xs:complexType name="ArrayOfCountry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Country" nillable="true" type="tns:Country" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCountry" nillable="true" type="tns:ArrayOfCountry" />
+  <xs:complexType name="Country">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Record">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CountryId" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Country" nillable="true" type="tns:Country" />
+</xs:schema>

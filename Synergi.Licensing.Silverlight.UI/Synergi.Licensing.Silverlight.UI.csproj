@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C98F5BF3-14A0-4673-996E-22974451AEF0}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Synergi.Licensing.Silverlight.UI</RootNamespace>
+    <AssemblyName>Synergi.Licensing.Silverlight.UI</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>Synergi.Licensing.Silverlight.UI.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>Synergi.Licensing.Silverlight.UI.App</SilverlightAppEntry>
+    <TestPageFileName>Synergi.Licensing.Silverlight.UITestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Blacklight.Controls">
+      <HintPath>..\References\Blacklight.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Navigation, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Xml.Linq, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls, Version=2011.1.516.1040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Telerik.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Charting, Version=2011.1.516.1040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Telerik.Windows.Controls.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Docking, Version=2011.1.516.1040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Telerik.Windows.Controls.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Gauge, Version=2011.1.516.1040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Telerik.Windows.Controls.Gauge.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.GridView, Version=2011.1.516.1040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Telerik.Windows.Controls.GridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input, Version=2011.1.516.1040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Telerik.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Navigation, Version=2011.1.516.1040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Telerik.Windows.Controls.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.RichTextBoxUI, Version=2011.1.419.1040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Data, Version=2011.1.516.1040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Telerik.Windows.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.QuickStart">
+      <HintPath>..\References\Telerik.Windows.QuickStart.dll</HintPath>
+    </Reference>
+    <Reference Include="TiledBG">
+      <HintPath>..\References\TiledBG.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administration\CompetitorSourceAdminPage.xaml.cs">
+      <DependentUpon>CompetitorSourceAdminPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\ModuleAdminPage.xaml.cs">
+      <DependentUpon>ModuleAdminPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\PackageAdminPage.xaml.cs">
+      <DependentUpon>PackageAdminPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\UserAccountPage.xaml.cs">
+      <DependentUpon>UserAccountPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\ChangePasswordPage.xaml.cs">
+      <DependentUpon>ChangePasswordPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Code\DataServiceHelper.cs" />
+    <Compile Include="Code\ExtensionsTelerikSilverlight.cs" />
+    <Compile Include="Code\FontHelper.cs" />
+    <Compile Include="Code\Globals.cs" />
+    <Compile Include="Code\Silverlight.Controls.ToolTips.cs" />
+    <Compile Include="Code\SiteMapHelper.cs" />
+    <Compile Include="Code\UiHelper.cs" />
+    <Compile Include="Code\UriHelper.cs" />
+    <Compile Include="Common\SiteMapMenuItem.cs" />
+    <Compile Include="Controls\ClippedBottomGrid.cs" />
+    <Compile Include="Controls\ClippedGrid.cs" />
+    <Compile Include="Controls\Highlighter.xaml.cs">
+      <DependentUpon>Highlighter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Information.xaml.cs">
+      <DependentUpon>Information.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Logo.xaml.cs">
+      <DependentUpon>Logo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SharedResourceDictionary.cs" />
+    <Compile Include="Controls\SingleClickButton.cs" />
+    <Compile Include="Controls\UserAccount.xaml.cs">
+      <DependentUpon>UserAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\ActivationTextConverter.cs" />
+    <Compile Include="Converters\CheckStateConverter.cs" />
+    <Compile Include="Converters\ConstantConverter.cs" />
+    <Compile Include="Converters\DateConverter.cs" />
+    <Compile Include="Converters\ErrorToVisibilityConverter.cs" />
+    <Compile Include="Converters\NumericConverter.cs" />
+    <Compile Include="Converters\SiteActivationTextConverter.cs" />
+    <Compile Include="Converters\StatusToColorConverter.cs" />
+    <Compile Include="Converters\TagToVisibilityConverter.cs" />
+    <Compile Include="Converters\TextBlockInlineConverter.cs" />
+    <Compile Include="Customer\ContractDetailsPage.xaml.cs">
+      <DependentUpon>ContractDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\ContractDetails.xaml.cs">
+      <DependentUpon>ContractDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerAdminPage.xaml.cs">
+      <DependentUpon>CustomerAdminPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\AuthorizedContentLoader.cs" />
+    <Compile Include="MasterPage\Header.xaml.cs">
+      <DependentUpon>Header.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\HeaderMenuButton.xaml.cs">
+      <DependentUpon>HeaderMenuButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\InterimHeader.xaml.cs">
+      <DependentUpon>InterimHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\InterimHeaderMenuButton.xaml.cs">
+      <DependentUpon>InterimHeaderMenuButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\SideBarLeft.xaml.cs">
+      <DependentUpon>SideBarLeft.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\SideBarMenu.xaml.cs">
+      <DependentUpon>SideBarMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\SynergiLicensingService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\LoginVM.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Content Include="Assets\Themes\BlackBlue\ButtonChrome.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\Themes\BlackBlue\MasterResource.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\Themes\BlackBlue\RadComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\Themes\BlackBlue\RadDatePicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\Themes\BlackBlue\RadGridView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\Themes\BlackBlue\RadMaskedTextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\Themes\BlackBlue\RadNumericUpDown.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\Themes\BlackBlue\RadTabItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\Themes\BlackBlue\RadTreeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\Themes\BlackBlue\RadWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\Themes\BlackBlue\SpecificPageResource.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\Themes\BlackBlue\TextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="Administration\ChangePasswordPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Administration\CompetitorSourceAdminPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Administration\ModuleAdminPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Administration\PackageAdminPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Administration\UserAccountPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Highlighter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Information.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Logo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\UserAccount.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Customer\ContractDetailsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Customer\ContractDetails.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Customer\CustomerAdminPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HomePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MasterPage\Header.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MasterPage\HeaderMenuButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MasterPage\InterimHeader.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MasterPage\InterimHeaderMenuButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MasterPage\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MasterPage\SideBarLeft.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MasterPage\SideBarMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\DataSources\Synergi.Licensing.Common.AspUser.datasource" />
+    <None Include="Properties\DataSources\Synergi.Licensing.Common.CompetitorSource.datasource" />
+    <None Include="Properties\DataSources\Synergi.Licensing.Common.ContactInformation.datasource" />
+    <None Include="Properties\DataSources\Synergi.Licensing.Common.Contract.datasource" />
+    <None Include="Properties\DataSources\Synergi.Licensing.Common.Country.datasource" />
+    <None Include="Properties\DataSources\Synergi.Licensing.Common.Customer.datasource" />
+    <None Include="Properties\DataSources\Synergi.Licensing.Common.Module.datasource" />
+    <None Include="Properties\DataSources\Synergi.Licensing.Common.Package.datasource" />
+    <None Include="Service References\SynergiLicensingService\Synergi.Licensing.Silverlight.UI.SynergiLicensingService.AppSettings.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SynergiLicensingService\Synergi.Licensing.Silverlight.UI.SynergiLicensingService.GlobalVariable.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SynergiLicensingService\Synergi.Licensing.Silverlight.UI.SynergiLicensingService.UserLogin.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SynergiLicensingService\SynergiLicensingService.wsdl" />
+    <None Include="Service References\SynergiLicensingService\SynergiLicensingService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SynergiLicensingService\SynergiLicensingService1.wsdl" />
+    <None Include="Service References\SynergiLicensingService\SynergiLicensingService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Resource Include="Images\SynergiLicensing.png" />
+    <Content Include="ServiceReferences.ClientConfig">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Service References\SynergiLicensingService\SynergiLicensingService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SynergiLicensingService\SynergiLicensingService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Synergi.Licensing.SL.Common\Synergi.Licensing.SL.Common.csproj">
+      <Project>{BF5FD8B1-41F6-44BA-8A20-B1B0F1C68C06}</Project>
+      <Name>Synergi.Licensing.SL.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\accor200.png" />
+    <Resource Include="Images\BlackBlueBg.png" />
+    <Resource Include="Images\BlueBg14.png" />
+    <Resource Include="Images\Boardroom.png" />
+    <Resource Include="Images\carbon-fiber-10x10.png" />
+    <Resource Include="Images\carbon-fiber-13x23.png" />
+    <Resource Include="Images\carbon-fiber-8x8.png" />
+    <Resource Include="Images\carbon-fiber-bg.png" />
+    <Resource Include="Images\ChartOptions.gif" />
+    <Resource Include="Images\ChartOptions.png" />
+    <Resource Include="Images\checkboxOff.gif" />
+    <Resource Include="Images\checkboxOn.gif" />
+    <Resource Include="Images\Clear.png" />
+    <Resource Include="Images\DefaultBackground.png" />
+    <Resource Include="Images\employee-bg.png" />
+    <Resource Include="Images\empty_user_photo.png" />
+    <Resource Include="Images\endLocationIcon.png" />
+    <Resource Include="Images\green-cross.png" />
+    <Resource Include="Images\green-tick.png" />
+    <Resource Include="Images\grid-add-multiple.png" />
+    <Resource Include="Images\grid-add.png" />
+    <Resource Include="Images\grid-delete.png" />
+    <Resource Include="Images\grid-edit.png" />
+    <Resource Include="Images\grid-select-disabled.png" />
+    <Resource Include="Images\grid-select.png" />
+    <Resource Include="Images\happy-smiley-face.png" />
+    <Resource Include="Images\info.png" />
+    <Resource Include="Images\infosmall.png" />
+    <Resource Include="Images\logo.png" />
+    <Resource Include="Images\lookupIcon.png" />
+    <Resource Include="Images\object_add.png" />
+    <Resource Include="Images\Office_BlackChartBackground.jpg" />
+    <Resource Include="Images\offline.png" />
+    <Resource Include="Images\online.png" />
+    <Resource Include="Images\orange-question-mark.png" />
+    <Resource Include="Images\padlock.png" />
+    <Resource Include="Images\Pause.png" />
+    <Resource Include="Images\plain-face.png" />
+    <Resource Include="Images\Play.png" />
+    <Resource Include="Images\red-cross.png" />
+    <Resource Include="Images\ReportIcon.png" />
+    <Resource Include="Images\restore.png" />
+    <Resource Include="Images\restore2.png" />
+    <Resource Include="Images\Routing.PNG" />
+    <Resource Include="Images\sad-face.png" />
+    <Resource Include="Images\SnapshotCompetition.png" />
+    <Resource Include="Images\SnapShotEnergy.png" />
+    <Resource Include="Images\SnapshotPickup.png" />
+    <Resource Include="Images\startLocationIcon.png" />
+    <Resource Include="Images\StepForward.png" />
+    <Resource Include="Images\synergi.png" />
+    <Resource Include="Images\synergiLogo3.png" />
+    <Resource Include="Images\Transparent.png" />
+    <Resource Include="Images\uncle-scrooge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SynergiLicensingService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SynergiLicensingService\SynergiLicensingService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SynergiLicensingService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SynergiLicensingService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SynergiLicensingService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Web.UI" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Web.UI" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:49539/SynergiLicensingService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" />
+  <xs:import schemaLocation="http://localhost:49539/SynergiLicensingService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="GlobalVariable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppSettings" nillable="true" type="tns:AppSettings" />
+      <xs:element minOccurs="0" name="ApplicationCurrentDateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UserLogin" nillable="true" type="tns:UserLogin" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GlobalVariable" nillable="true" type="tns:GlobalVariable" />
+  <xs:complexType name="AppSettings">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ReportLocalization" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReportServerUrl" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AppSettings" nillable="true" type="tns:AppSettings" />
+  <xs:complexType name="UserLogin">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Synergi.Licensing.Common" minOccurs="0" name="AspUser" nillable="true" type="q1:AspUser" />
+      <xs:element minOccurs="0" name="IsUserAdministrator" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsUserCustomer" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UserCustomerId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserOrganisationWeekday" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserUserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserLogin" nillable="true" type="tns:UserLogin" />
+</xs:schema>
